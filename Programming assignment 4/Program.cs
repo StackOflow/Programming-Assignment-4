@@ -42,6 +42,7 @@ namespace Programming_assignment_4
             // Your one-time setup code here
 
             // Parker
+            Enemy.Setup();
         }
 
         static void Update()
@@ -49,6 +50,7 @@ namespace Programming_assignment_4
             // Your game code run each frame here
 
             // Parker
+            Enemy.Update();
         }
     }
 }
