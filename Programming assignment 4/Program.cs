@@ -40,11 +40,15 @@ namespace Programming_assignment_4
         static void Setup()
         {
             // Your one-time setup code here
+
+            // Parker
         }
 
         static void Update()
         {
             // Your game code run each frame here
+
+            // Parker
         }
     }
 }
