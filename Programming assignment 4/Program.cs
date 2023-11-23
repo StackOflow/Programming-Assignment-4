@@ -6,13 +6,16 @@ namespace Programming_assignment_4
 {
     internal class Program
     {
+
         // If you need variables in the Program class (outside functions), you must mark them as static
         static string title = "Game Title";
+        static int windowWidth = 1750;
+        static int windowHeight = 1000;
 
         static void Main(string[] args)
         {
             // Create a window to draw to. The arguments define width and height
-            Raylib.InitWindow(800, 600, title);
+            Raylib.InitWindow(windowWidth, windowHeight, title);
             // Set the target frames-per-second (FPS)
             Raylib.SetTargetFPS(60);
 
@@ -51,6 +54,7 @@ namespace Programming_assignment_4
 
             // Parker
             Enemy.Update();
+            Player.Move(windowWidth, windowHeight);
         }
     }
 }

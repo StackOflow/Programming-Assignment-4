@@ -1,25 +1,17 @@
-﻿using Raylib_cs;
-using System.Drawing;
+﻿// Include necessary libraries
+using Raylib_cs;
 using System.Numerics;
-using System.Runtime.InteropServices;
-using System.Security.Cryptography;
-using Color = Raylib_cs.Color;
 
-namespace Ballengine2
+namespace Programming_assignment_4
 {
-    internal class Program
+    internal class Player
     {
-        static string title = "Ball Engine";
-
-        //game area
-        static int windowWidth = 1750;
-        static int windowHeight = 1000;
         //mouse
         static int mouseX = 0;
         static int mouseY = 0;
         static int mousePlayerDistance = 0;
 
-        
+
         //player
         static float playerPosX = 500;
         static float playerPosY = 500;
@@ -32,36 +24,12 @@ namespace Ballengine2
         static float playerPullX = 0;
         static float playerPullY = 0;
 
-        
+
         static float playerMainRadius = 10;
 
         //obj 1
 
-        static void Main(string[] args)
-        {
-            Raylib.InitWindow(windowWidth, windowHeight, title); //game window
-            Raylib.SetTargetFPS(60); //target FPS
-
-            Setup();
-
-            while (!Raylib.WindowShouldClose())
-            {
-                Raylib.BeginDrawing();
-                Raylib.ClearBackground(Color.RAYWHITE); //bg colour
-
-                Update();
-
-                Raylib.EndDrawing();
-            }
-
-            Raylib.CloseWindow();
-        }
-
-        static void Setup()
-        {
-
-        }
-        static void Update()
+        public static void Move(int windowWidth, int windowHeight)
         {
             // movement when holding left click
             if (Raylib.IsMouseButtonDown(MouseButton.MOUSE_BUTTON_LEFT))
@@ -120,7 +88,7 @@ namespace Ballengine2
                 playerVelY = playerVelY - playerVelY / 10;
             }
 
-            
+
             if ((int)playerSpeed > 5)
             {
                 playerSpeed = 5;
@@ -146,7 +114,7 @@ namespace Ballengine2
             Raylib.DrawText("xpos" + playerPosX.ToString(), 20, 40, 20, Color.BLACK);
             Raylib.DrawText("ypos" + playerPosY.ToString(), 20, 60, 20, Color.BLACK);
             Raylib.DrawText(mouseY.ToString(), 20, 80, 20, Color.BLACK);
-            Raylib.DrawText(playerTargetAngle.ToString(), mouseX+3, mouseY+3, 10, Color.BLACK);
+            Raylib.DrawText(playerTargetAngle.ToString(), mouseX + 3, mouseY + 3, 10, Color.BLACK);
             Raylib.DrawLine((int)playerPosX, (int)playerPosY, mouseX, mouseY, Color.RED);
         }
     }
