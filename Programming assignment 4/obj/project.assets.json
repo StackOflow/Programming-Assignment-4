@@ -128,19 +128,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\cjpar\\.nuget\\packages\\": {}
+    "C:\\Users\\devin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\cjpar\\OneDrive\\Documents\\GitHub\\Programming-Assignment-4\\Programming assignment 4\\Programming assignment 4.csproj",
+      "projectUniqueName": "C:\\Users\\devin\\OneDrive\\Documents\\GitHub\\Programming-Assignment-4\\Programming assignment 4\\Programming assignment 4.csproj",
       "projectName": "Programming assignment 4",
-      "projectPath": "C:\\Users\\cjpar\\OneDrive\\Documents\\GitHub\\Programming-Assignment-4\\Programming assignment 4\\Programming assignment 4.csproj",
-      "packagesPath": "C:\\Users\\cjpar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\cjpar\\OneDrive\\Documents\\GitHub\\Programming-Assignment-4\\Programming assignment 4\\obj\\",
+      "projectPath": "C:\\Users\\devin\\OneDrive\\Documents\\GitHub\\Programming-Assignment-4\\Programming assignment 4\\Programming assignment 4.csproj",
+      "packagesPath": "C:\\Users\\devin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\devin\\OneDrive\\Documents\\GitHub\\Programming-Assignment-4\\Programming assignment 4\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\cjpar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\devin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
