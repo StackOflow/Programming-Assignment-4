@@ -31,6 +31,9 @@ namespace Programming_assignment_4
 
         public static void Move(int windowWidth, int windowHeight)
         {
+            playerPosX = playerPosX + playerVelX;
+            playerPosY = playerPosY + playerVelY;
+
             // movement when holding left click
             if (Raylib.IsMouseButtonDown(MouseButton.MOUSE_BUTTON_LEFT))
             {
@@ -56,11 +59,18 @@ namespace Programming_assignment_4
                 playerVelX = playerVelX + (playerPullX / 300);
                 playerVelY = playerVelY + (playerPullY / 300);
 
+                Raylib.DrawLine((int)playerPosX, (int)playerPosY, mouseX, mouseY, Color.RED);
+
+                if (Raylib.IsMouseButtonDown(MouseButton.MOUSE_RIGHT_BUTTON) || Raylib.IsKeyDown(KeyboardKey.KEY_SPACE))
+                {
+                    Raylib.DrawLine((int)playerPosX, (int)playerPosY, mouseX, mouseY, Color.BLUE);
+                    playerVelX = playerVelX + (playerPullX / 100);
+                    playerVelY = playerVelY + (playerPullY / 100);
+                }
+
                 playerVelX = playerVelX - (playerVelX / 24);
                 playerVelY = playerVelY - (playerVelY / 24);
             }
-            playerPosX = playerPosX + playerVelX;
-            playerPosY = playerPosY + playerVelY;
 
             //keep within walls + speed bounds
             if (playerPosX - playerMainRadius < 0)
@@ -115,7 +125,6 @@ namespace Programming_assignment_4
             Raylib.DrawText("ypos" + playerPosY.ToString(), 20, 60, 20, Color.BLACK);
             Raylib.DrawText(mouseY.ToString(), 20, 80, 20, Color.BLACK);
             Raylib.DrawText(playerTargetAngle.ToString(), mouseX + 3, mouseY + 3, 10, Color.BLACK);
-            Raylib.DrawLine((int)playerPosX, (int)playerPosY, mouseX, mouseY, Color.RED);
         }
     }
 }
