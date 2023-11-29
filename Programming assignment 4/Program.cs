@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-﻿using Raylib_cs;
-
-=======
-﻿// Include necessary libraries
+// Include necessary libraries
 using Raylib_cs;
 using System.Numerics;
->>>>>>> main
 
 namespace Programming_assignment_4
 {

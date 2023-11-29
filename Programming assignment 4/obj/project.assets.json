@@ -128,19 +128,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\cjpar\\.nuget\\packages\\": {}
+    "C:\\Users\\train\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\cjpar\\OneDrive\\Documents\\GitHub\\Programming-Assignment-4\\Programming assignment 4\\Programming assignment 4.csproj",
+      "projectUniqueName": "C:\\Users\\train\\Documents\\GitHub\\Programming-Assignment-4\\Programming assignment 4\\Programming assignment 4.csproj",
       "projectName": "Programming assignment 4",
-      "projectPath": "C:\\Users\\cjpar\\OneDrive\\Documents\\GitHub\\Programming-Assignment-4\\Programming assignment 4\\Programming assignment 4.csproj",
-      "packagesPath": "C:\\Users\\cjpar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\cjpar\\OneDrive\\Documents\\GitHub\\Programming-Assignment-4\\Programming assignment 4\\obj\\",
+      "projectPath": "C:\\Users\\train\\Documents\\GitHub\\Programming-Assignment-4\\Programming assignment 4\\Programming assignment 4.csproj",
+      "packagesPath": "C:\\Users\\train\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\train\\Documents\\GitHub\\Programming-Assignment-4\\Programming assignment 4\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\cjpar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\train\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -148,6 +153,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -187,11 +193,7 @@
             "privateAssets": "all"
           }
         },
-<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
-=======
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
->>>>>>> main
       }
     }
   }
