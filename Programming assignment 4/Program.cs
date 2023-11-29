@@ -51,8 +51,6 @@ namespace Programming_assignment_4
 
             // Parker
             Enemy.Update();
-
-            Raylib.DrawText("Game Over", 400, 300, 50, Color.RED);
         }
     }
 }
