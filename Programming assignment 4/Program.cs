@@ -1,4 +1,7 @@
-﻿namespace Programming_assignment_4
+﻿using Raylib_cs;
+
+
+namespace Programming_assignment_4
 {
     internal class Program
     {

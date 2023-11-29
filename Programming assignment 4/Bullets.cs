@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Programming_assignment_4
 {
-    internal class Class1
+    internal class Bullets
     {
+        
     }
 }

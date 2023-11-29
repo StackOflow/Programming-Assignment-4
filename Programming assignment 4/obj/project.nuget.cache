@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "GzFtHNuEteYTQmTcStFpAuyPqzDTWc+6107W3oZlCiBiQ7ul5UNKadCdZNzwW7akHNK5ul5+my7v4cDSlt/KFQ==",
+  "dgSpecHash": "O1ml4yXnTsOfe2XAjib84n8cxixBbksxGqBbVX9A7t5MxQDmIoRGBAzKuEMS2XvmAVaxHI4fRP1rgxpiC6RATg==",
   "success": true,
   "projectFilePath": "C:\\Users\\train\\Documents\\GitHub\\Programming-Assignment-4\\Programming assignment 4\\Programming assignment 4.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\train\\.nuget\\packages\\raylib-cs\\5.0.0\\raylib-cs.5.0.0.nupkg.sha512",
+    "C:\\Users\\train\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512"
+  ],
   "logs": []
 }
