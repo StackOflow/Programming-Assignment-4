@@ -18,39 +18,53 @@ namespace Programming_assignment_4
 
             // Setup your game. This is a function YOU define.
             Setup();
-
-            // Loop so long as window should not close
-            while (!Raylib.WindowShouldClose())
+            static void Main(string[] args)
             {
-                // Enable drawing to the canvas (window)
-                Raylib.BeginDrawing();
-                // Clear the canvas with one color
-                Raylib.ClearBackground(Color.WHITE);
+                // Create a window to draw to. The arguments define width and height
+                Raylib.InitWindow(800, 600, title);
+                // Set the target frames-per-second (FPS)
+                Raylib.SetTargetFPS(60);
 
-                // Your game code here. This is a function YOU define.
-                Update();
+                while (!Raylib.WindowShouldClose())
+                {
+                    // Your game code run each frame here
 
-                // Stop drawing to the canvas, begin displaying the frame
-                Raylib.EndDrawing();
+                    // Parker
+                    Enemy.Update();
+
+                    // Check collisions for the enemy every frame within its Update method
+                    // This is to ensure collisions are checked with each frame update
+                    // You may need to replace these values with your actual enemy position, radius, and velocity
+                    Enemy.CheckEnemyCollisionCollision();
+
+                    Raylib.BeginDrawing();
+                    Raylib.ClearBackground(Color.WHITE);
+
+                   
+
+
+
+                    Raylib.EndDrawing();
+                }
+
+                Raylib.CloseWindow();
             }
-            // Close the window
-            Raylib.CloseWindow();
-        }
 
-        static void Setup()
-        {
-            // Your one-time setup code here
+            static void Setup()
+            {
+                // Your one-time setup code here
 
-            // Parker
-            Enemy.Setup();
-        }
+                // Parker
+                Enemy.Setup();
+            }
 
-        static void Update()
-        {
-            // Your game code run each frame here
+            static void Update()
+            {
+                // Your game code run each frame here
 
-            // Parker
-            Enemy.Update();
+                // Parker
+                Enemy.Update();
+            }
         }
     }
 }
