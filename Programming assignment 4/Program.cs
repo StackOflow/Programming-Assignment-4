@@ -8,6 +8,9 @@ namespace Programming_assignment_4
     {
         // If you need variables in the Program class (outside functions), you must mark them as static
         static string title = "Game Title";
+        static Bullets bullets;
+        static Bullet bullet;
+
 
         static void Main(string[] args)
         {
@@ -43,6 +46,10 @@ namespace Programming_assignment_4
 
             // Parker
             Enemy.Setup();
+
+            //Xander
+            bullets = new Bullets();
+            bullet = new Bullet(0, 100);
         }
 
         static void Update()
@@ -51,6 +58,10 @@ namespace Programming_assignment_4
 
             // Parker
             Enemy.Update();
+
+            //Xander
+            bullets.Update();
+            bullets.Draw();
         }
     }
 }
