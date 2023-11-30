@@ -24,7 +24,7 @@ public class Bullets
             bullet.Update();
         }
 
-        // Generate new bullets
+        // Create new bullets
         if (Raylib.GetRandomValue(0, 100) < 5)
         {
             float startX = Raylib.GetScreenWidth() + 10; // Start off-screen
@@ -55,7 +55,7 @@ public class Bullet
     public Bullet(float startX, float startY)
     {
         Position = new Vector2(startX, startY);
-        speed = 2.5f; // Adjust the speed as needed
+        speed = 2.5f;
     }
 
     public void Update()
@@ -67,6 +67,6 @@ public class Bullet
     public void Draw()
     {
         Raylib.DrawLine((int)Position.X, (int)Position.Y, (int)Position.X - 5, (int)Position.Y, Color.RED);
-        // Adjust the line parameters (color, length, etc.) as needed
+        // Chooses line parameters (color, length, etc.)
     }
 }
