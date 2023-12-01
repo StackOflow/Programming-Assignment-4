@@ -1,11 +1,20 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "ISbeiR40Hb0NCu0yHk6lbuFPQvVOicEE9kaLxwTvt8bA3O2ulsIZ17B0gUnMr/KvdRELHJ9QhKOhtfcgBGz1ug==",
   "success": true,
   "projectFilePath": "C:\\Users\\cyven\\OneDrive\\Documents\\GitHub\\Programming-Assignment-4\\Programming assignment 4\\Programming assignment 4.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\cyven\\.nuget\\packages\\raylib-cs\\5.0.0\\raylib-cs.5.0.0.nupkg.sha512",
     "C:\\Users\\cyven\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512"
+=======
+  "dgSpecHash": "O1ml4yXnTsOfe2XAjib84n8cxixBbksxGqBbVX9A7t5MxQDmIoRGBAzKuEMS2XvmAVaxHI4fRP1rgxpiC6RATg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\train\\Documents\\GitHub\\Programming-Assignment-4\\Programming assignment 4\\Programming assignment 4.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\train\\.nuget\\packages\\raylib-cs\\5.0.0\\raylib-cs.5.0.0.nupkg.sha512",
+    "C:\\Users\\train\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512"
+>>>>>>> main
   ],
   "logs": []
 }

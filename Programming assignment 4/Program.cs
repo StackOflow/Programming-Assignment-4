@@ -1,4 +1,4 @@
-﻿// Include necessary libraries
+// Include necessary libraries
 using Raylib_cs;
 using System.Numerics;
 
@@ -11,6 +11,8 @@ namespace Programming_assignment_4
         static string title = "Game Title";
         static int windowWidth = 1750;
         static int windowHeight = 1000;
+        static Bullets bullets;
+        static Bullet bullet;
 
         static void Main(string[] args)
         {
@@ -46,6 +48,10 @@ namespace Programming_assignment_4
 
             // Parker
             Enemy.Setup();
+
+            //Xander
+            bullets = new Bullets();
+            bullet = new Bullet(0, 100);
         }
 
         static void Update()
@@ -54,7 +60,13 @@ namespace Programming_assignment_4
 
             // Parker
             Enemy.Update();
+
+            //Cyven
             Player.Move(windowWidth, windowHeight);
+
+            //Xander
+            bullets.Update();
+            bullets.Draw();
         }
     }
 }
