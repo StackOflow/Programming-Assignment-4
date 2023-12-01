@@ -1,0 +1,154 @@
+using Raylib_cs;
+using System.Numerics;
+using System.Runtime.InteropServices;
+using System.Security.Cryptography;
+
+namespace Sandbox1
+{
+    internal class Program
+    {
+        // If you need variables in the Program class (outside functions), you must mark them as static
+        static Random randomCall = new Random();
+        static string title = "Ball Engine";
+
+        //game area
+        static int windowWidth = 1750;
+        static int windowHeight = 1000;
+        //player
+        static int playerPosX = 500;
+        static int playerPosY = 500;
+        static float playerVelX = 0;
+        static float playerVelY = 0;
+
+        static float playerMainRadius = 10;
+
+        //obj 1
+        static float obj1PosX = 500;
+        static float obj1Posy = 200;
+        static float obj1VelX = 0;
+        static float obj1VelY = 0;
+    
+        static void Main(string[] args)
+        {
+            Raylib.InitWindow(windowWidth, windowHeight, title); //game window
+            Raylib.SetTargetFPS(60); //target FPS
+
+            Setup();
+
+            while (!Raylib.WindowShouldClose())
+            {
+                Raylib.BeginDrawing();
+                Raylib.ClearBackground(Color.RAYWHITE); //bg colour
+
+                Update();
+
+                Raylib.EndDrawing();
+            }
+
+            Raylib.CloseWindow();
+        }
+
+        static void Setup()
+        {
+
+        }
+        static void Update()
+        {
+            //player movement
+            if (Raylib.IsKeyDown(KeyboardKey.KEY_LEFT))
+            {
+                playerVelX = playerVelX - 0.3f;
+            }
+            if (Raylib.IsKeyDown(KeyboardKey.KEY_RIGHT))
+            {
+                playerVelX = playerVelX + 0.3f;
+            }
+            if (!Raylib.IsKeyDown(KeyboardKey.KEY_LEFT) && !Raylib.IsKeyDown(KeyboardKey.KEY_RIGHT))
+            {
+                if (playerVelX < 0f)
+                {
+                    playerVelX = playerVelX + 0.1f;
+                }
+                if (playerVelX > 0f)
+                {
+                    playerVelX = playerVelX - 0.1f;
+                }
+                if (playerVelX < -0.4f && playerVelX > 0.4f)
+                {
+                    playerVelX = 0;
+                }
+            }
+            if (Raylib.IsKeyDown(KeyboardKey.KEY_UP))
+            {
+                playerVelY = playerVelY - 0.3f;
+            }
+            if (Raylib.IsKeyDown(KeyboardKey.KEY_DOWN))
+            {
+                playerVelY = playerVelY + 0.3f;
+            }
+            if (!Raylib.IsKeyDown(KeyboardKey.KEY_UP) && !Raylib.IsKeyDown(KeyboardKey.KEY_DOWN))
+            {
+                if (playerVelY < 0f)
+                {
+                    playerVelY = playerVelY + 0.1f;
+                }
+                if (playerVelY > 0f)
+                {
+                    playerVelY = playerVelY - 0.1f;
+                }
+                if (playerVelY < -0.4f && playerVelY > 0.4f)
+                {
+                    playerVelY = 0;
+                }
+            }
+            if ((int)playerVelX < -15)
+            {
+                playerVelX = -15;
+            }
+            if ((int)playerVelX > 15)
+            {
+                playerVelX = 15;
+            }
+            if ((int)playerVelY < -15f)
+            {
+                playerVelY = -15;
+            }
+            if ((int)playerVelY > 15f)
+            {
+                playerVelY = 15;
+            }
+            if (playerPosX - playerMainRadius < 0)
+            {
+                playerPosX = (int)playerMainRadius;
+                playerVelX = playerVelX + -playerVelX * 2;
+                playerVelX++;
+            }
+            if (playerPosX + (int)playerMainRadius > windowWidth)
+            {
+                playerPosX = windowWidth - (int)playerMainRadius;
+                playerVelX = playerVelX - playerVelX * 2;
+            }
+            if (playerPosY - playerMainRadius < 0)
+            {
+                playerPosY = (int)playerMainRadius;
+                playerVelY = playerVelY + -playerVelY * 2;
+                playerVelY++;
+            }
+            if (playerPosY + (int)playerMainRadius > windowHeight)
+            {
+                playerPosY = windowHeight - (int)playerMainRadius;
+                playerVelY = playerVelY - playerVelY * 2;
+            }
+
+            playerPosX = playerPosX + (int)playerVelX;
+            playerPosY = playerPosY + (int)playerVelY;
+            //player draw
+            Raylib.DrawCircle(playerPosX, playerPosY, playerMainRadius, Color.GOLD);
+            Raylib.DrawCircleLines(playerPosX, playerPosY, playerMainRadius, Color.BLACK);
+
+            Raylib.DrawText(playerVelX.ToString(), 20, 20, 20, Color.BLACK);
+            Raylib.DrawText(playerPosX.ToString(), 20, 40, 20, Color.BLACK);
+
+        }
+    }
+}
